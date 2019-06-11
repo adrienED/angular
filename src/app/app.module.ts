@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { RecipesComponent } from './recipes/recipes.component';
 
 import {AppRoutingModule} from './app-routing.module';
+import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {AppRoutingModule} from './app-routing.module';
     AppComponent,
     HeaderComponent,
     RecipeComponent,
-    RecipesComponent
+    RecipesComponent,
+    RecipeDetailComponent
 
   ],
   imports: [
@@ -26,7 +28,7 @@ import {AppRoutingModule} from './app-routing.module';
     CustomMaterialModule,
     MatCardModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
