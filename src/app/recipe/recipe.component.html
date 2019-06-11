@@ -10,15 +10,17 @@
     <p>
       {{recipe.description}}
     </p>
-    <ul>
+    <ul *ngIf="visible" >
       <li *ngFor="let ingredient of recipe.ingredients">
         {{ingredient.ingredient.name}} {{ingredient.quantity}} {{ingredient.unit}}
       </li>
     </ul>
-
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+
+    <button (click)="ToggleVisibility()">
+      See more
+    </button>
+
   </mat-card-actions>
 </mat-card>
