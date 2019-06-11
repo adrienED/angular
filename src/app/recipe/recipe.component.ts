@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {MOCK_RECIPES} from './recipes.mock';
+import {Recipe} from './model/recipe.model';
 
 @Component({
   selector: 'app-recipe',
@@ -7,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeComponent implements OnInit {
 
-  constructor() { }
 
+  @Input()
+  recipe: Recipe;
+  recipes = MOCK_RECIPES;
+
+  constructor() { }
   ngOnInit() {
   }
 

@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import {CustomMaterialModule} from './custom-material/custom-material.module';
 import { RecipeComponent } from './recipe/recipe.component';
 
+import {MatCardModule} from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { RecipeComponent } from './recipe/recipe.component';
   ],
   imports: [
     BrowserModule,
-    CustomMaterialModule
+    CustomMaterialModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
