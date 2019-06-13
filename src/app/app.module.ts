@@ -12,6 +12,9 @@ import { RecipesComponent } from './recipes/recipes.component';
 
 import {AppRoutingModule} from './app-routing.module';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { AddComponent } from './add/add.component';
+import {MatFormFieldModule} from '@angular/material';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +23,8 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
     HeaderComponent,
     RecipeComponent,
     RecipesComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    AddComponent
 
   ],
   imports: [
@@ -29,6 +33,8 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
     MatCardModule,
     HttpClientModule,
     AppRoutingModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {RecipeService} from '../recipe.service';
+import {RecipeService} from '../service/recipe.service';
 import {Recipe} from '../recipe/model/recipe.model';
 
 @Component({
@@ -18,5 +18,4 @@ export class RecipeDetailComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get('id');
     this.recipeService.getRecipe(this.id).subscribe(result => this.recipe = result);
   }
-
 }

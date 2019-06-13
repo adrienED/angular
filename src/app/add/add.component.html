@@ -1,0 +1,21 @@
+<div class="example-container">
+
+  <form (ngSubmit)=addRecipe() formControl="recipeGroup">
+
+    <mat-form-field>
+      <input matInput formControlName="name" placeholder="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="description" placeholder="description">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput formControlName="picture" placeholder="picture"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <button mat-button type="submit" [disabled]="recipeGroup.invalid">Add Recipe</button>
+    </mat-form-field>
+  </form>
+</div>

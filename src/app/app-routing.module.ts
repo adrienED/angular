@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {RecipesComponent} from './recipes/recipes.component';
 import {RecipeDetailComponent} from './recipe-detail/recipe-detail.component';
+import {AddComponent} from './add/add.component';
+import {Recipe} from './recipe/model/recipe.model';
+
 
 const routes: Routes = [
 
@@ -17,8 +20,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '**',
-    redirectTo: 'recipes',
+    path: 'add',
+    component: AddComponent,
     pathMatch: 'full'
   }
 ];

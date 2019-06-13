@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MOCK_RECIPES} from './recipes.mock';
 import {Recipe} from './model/recipe.model';
-import {RecipeService} from '../recipe.service';
+import {RecipeService} from '../service/recipe.service';
 
 @Component({
   selector: 'app-recipe',
@@ -13,7 +12,6 @@ export class RecipeComponent implements OnInit {
 
   @Input()
   recipe: Recipe;
-  recipes = MOCK_RECIPES;
   visible = false;
 
   constructor(private recipeService: RecipeService) { }
